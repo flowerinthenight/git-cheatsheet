@@ -89,6 +89,18 @@ git rebase -i master
 (sometimes, I branch out of master for a clean branch and do a git rebase -i clean-branch)
 ```
 
+### Combine all branch commits to one before merging to master (sort of like the one above)
+
+```
+git checkout master
+git checkout -b clean
+git merge --squash branch_to_merge_to_one_commit
+git commit
+(add commit message)
+git checkout master
+git merge clean
+```
+
 ### Custom format for log
 
 Add to global `.gitconfig` using `git config --global alias.logp "..."`
