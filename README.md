@@ -101,6 +101,12 @@ git checkout master
 git merge clean
 ```
 
+### Revert a file or directory to a previous commit
+
+```
+git checkout <commit_id> -- file/or/directory
+```
+
 ### Custom format for log
 
 Add to global `.gitconfig` using `git config --global alias.logp "..."`
